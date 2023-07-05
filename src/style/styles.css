@@ -1,0 +1,32 @@
+header{
+    font-size: 30px;
+}
+.card{
+    width:300px;
+    height:200px;
+    border:10px solid grey;
+    padding: 50px;
+    margin:40px;
+    background-color: plum;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+}
+.d-none{
+    display: none;
+}
+.question{
+    font-size: 20px;
+}
+button{
+    font-size: 20px;
+}
+.submit{
+    background-color:rgb(30, 102, 211);
+}
+.submitBtn{
+    height: 50px;
+    width: 100px;
+    background-color: rgb(63, 204, 63);
+    margin-left: 200px;
+}
