@@ -12,21 +12,19 @@ header{
     display: flex;
     flex-direction: column;
 }
-.d-none{
-    display: none;
-}
 .question{
     font-size: 20px;
 }
 button{
     font-size: 20px;
 }
-.submit{
+.answerBtn:hover{
     background-color:rgb(30, 102, 211);
 }
-.submitBtn{
-    height: 50px;
-    width: 100px;
-    background-color: rgb(63, 204, 63);
-    margin-left: 200px;
+.overallScore{
+    font-size: 30px;
+    margin:40px;
+    background-color: rgb(123, 236, 135);
+    justify-content: space-around;
+    display: flex;
 }
