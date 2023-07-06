@@ -13,6 +13,6 @@ const useTimer = (timeEnd) => {
       timeEnd();
     }
   }, [timeLeft]);
-  return { timeLeft };
+  return { timeLeft ,setTimeLeft};
 };
 export default useTimer;

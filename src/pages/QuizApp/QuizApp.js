@@ -9,7 +9,7 @@ const QuizApp = () => {
   const [score, setScore] = useState(null);
   const [showScore, setShowScore] = useState(false);
 
-  const { timeLeft } = useTimer(() => calculateScore(answerListByUser));
+  const { timeLeft,setTimeLeft } = useTimer(() => calculateScore(answerListByUser));
 
   const showNextCard = () => {
     setCardNo(cardNo + 1);
@@ -47,19 +47,17 @@ const QuizApp = () => {
     setScore(totalScore);
     setShowScore(true);
   }
-
+  function playAgain(){
+    setAnswerListByUser([])
+    setCardNo(0)
+    setShowScore(false)
+    setScore(null)
+    setTimeLeft(10)
+  }
   return (
     <div id="FirstDiv">
       <header>Quiz App</header>
       <div>
-        {timeLeft <= 0 ? (
-          <>
-            <div>Finished</div>
-            {showScore && (
-              <div className="overallScore">Your overall Score is {score}</div>
-            )}
-          </>
-        ) : (
           <>
             {showScore ? (
               <>
@@ -67,10 +65,11 @@ const QuizApp = () => {
                 <div className="overallScore">
                   Your overall Score is {score}
                 </div>
+                <button onClick={playAgain}>Play Again</button>
               </>
             ) : (
+              <>
               <div>{timeLeft} seconds remaining</div>
-            )}
             {quizArray.map((card, index) => {
               if (cardNo == index) {
                 return (
@@ -78,8 +77,9 @@ const QuizApp = () => {
                 );
               }
             })}
+             </>
+            )}
           </>
-        )}
       </div>
     </div>
   );

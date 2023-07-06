@@ -28,3 +28,8 @@ button{
     justify-content: space-around;
     display: flex;
 }
+.playAgain{
+    background-color: plum;
+    font-size: 20px;
+    margin-left:200px;
+}
